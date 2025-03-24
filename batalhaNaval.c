@@ -7,31 +7,27 @@ int main() {
     char coluna[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
     int linha[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int navio1[3] = {3, 3, 3}, navio2[3] = {3, 3, 3};
-    int tabuleiro [10][10] = {
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-    };
+    int tabuleiro [10][10];
+    //Preenche o array com zeros
+    for (i = 0; i < 10; i++){
+        for (j = 0; j < 10; j++){
+            tabuleiro[i][j] = 0;
+        }
+    }
+    
     //Exibição do tabuleiro
-    printf (" :.:.:.:.:. Jogo Batalha Naval .:.:.:.:.: \n\n\a");
+    printf (":.:.:.:.:. Jogo Batalha Naval .:.:.:.:.: \n\n\a");
     printf ("   ");
     
     for (j = 0; j < 10; j++){
 
-        printf ("%c   ", coluna[j]);//Imprime as letras das colunas
+        printf ("%c   ", coluna[j]);//Imprime a letra das colunas
     }        
             printf("\n");
    
     for (i = 0; i < 10; i++){
         
-        printf ("%d  ", linha[i]);//Imprime os números das linhas
+        printf ("%d  ", linha[i]);//Imprime o número das linhas
         
         for (j = 0; j < 9; j++){
         printf ("%d ~ ", tabuleiro[i][j]);//Imprime as colunas do tabuleiro
@@ -39,7 +35,6 @@ int main() {
         printf ("%d\n", tabuleiro[i][j]);//Imprime as linhas do tabuleiro
         
     }
-
-
+        
     return 0;
 }
