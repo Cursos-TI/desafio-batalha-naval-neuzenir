@@ -6,7 +6,6 @@ int main() {
     int i, j;
     char coluna[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
     int linha[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int navio1[3] = {3, 3, 3}, navio2[3] = {3, 3, 3};
     int tabuleiro [10][10];
     //Preenche o array com zeros
     for (i = 0; i < 10; i++){
@@ -15,8 +14,24 @@ int main() {
         }
     }
     
+     /*Preenche a posição de um navio na horizontal na 
+     linha 4, nas colunas F, G e H e outro navio na vertical, 
+     na coluna C, linhas 3, 4 e 5*/
+     for (i = 0; i < 10; i++){
+        for (j = 0; j < 10; j++){
+            tabuleiro[3][5] = 3;
+            tabuleiro[3][6] = 3;
+            tabuleiro[3][7] = 3;
+            tabuleiro[2][2] = 3;
+            tabuleiro[3][2] = 3;
+            tabuleiro[4][2] = 3;
+
+        }
+    }
+    
+    
     //Exibição do tabuleiro
-    printf (":.:.:.:.:. Jogo Batalha Naval .:.:.:.:.: \n\n\a");
+    printf ("\n :.:.:.:.:. Jogo Batalha Naval .:.:.:.:.: \n\n");
     printf ("   ");
     
     for (j = 0; j < 10; j++){
